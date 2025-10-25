@@ -1,13 +1,10 @@
 function getConcatenation(nums: number[]): number[] {
     
-    let ans: number[] = [];
-    let n = nums.length;
-
-    for(let i = 0; i < nums.length; i++) {
+    let ans = [], len = nums.length;
+    for(let i = 0; i < len; i++) {
         ans[i] = nums[i];
-        ans[i + n] = nums[i];
+        ans[i + len] = nums[i];
     }
-
+    
     return ans;
-
 };
