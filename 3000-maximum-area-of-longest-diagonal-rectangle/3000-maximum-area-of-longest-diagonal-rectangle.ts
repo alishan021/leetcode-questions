@@ -11,7 +11,6 @@ function areaOfMaxDiagonal(dimensions: number[][]): number {
             resultArr = [];
             resultArr.push(value);
         }
-        return dia;
     });
 
     return resultArr.reduce(( acc, cur ) => {
