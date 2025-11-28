@@ -2,7 +2,6 @@ function smallestIndex(nums: number[]): number {
     
     for(let i = 0; i < nums.length ; i++) {
        let num = sumOfDigits(nums[i]);
-       console.log(num ,i)
        if(num === i) return i;
     }
 
