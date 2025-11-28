@@ -11,11 +11,10 @@ function smallestIndex(nums: number[]): number {
 function sumOfDigits(num) {
 
     let total = 0;
-    while(num > 9) {
+    do {
         total += num % 10;
         num = Math.floor(num / 10);
-    }
-    total += num;
-    return total;
+    } while((num > 0))
 
+    return total;
 }
