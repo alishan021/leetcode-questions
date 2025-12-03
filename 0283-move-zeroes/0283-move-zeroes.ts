@@ -15,5 +15,4 @@ function moveZeroes(nums: number[]): void {
             i--;
         }
     }
-    console.log(nums)
 };
