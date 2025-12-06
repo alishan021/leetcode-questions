@@ -1,21 +1,16 @@
 function canPlaceFlowers(flowerbed: number[], n: number): boolean {
 
+    if(n === 0) return true;
+
     for(let i = 0; i < flowerbed.length; i++) {
-        let adj = flowerbed[i];
-        // let badj = flowerbed[i - 1] || oppositeNum(flowerbed[i]);
-        // let aadj = flowerbed[i + 1] || oppositeNum(flowerbed[i]);
-        let badj = flowerbed[i - 1] || 0;
-        let aadj = flowerbed[i + 1] || 0;
-        if(badj === adj && aadj === adj) {
-            flowerbed[i] = oppositeNum(flowerbed[i]);
+        let curr = flowerbed[i];
+        let prev = flowerbed[i - 1] || 0;
+        let next = flowerbed[i + 1] || 0;
+        if(prev === curr && next === curr) {
+            flowerbed[i] = curr === 1 ? 0 : 1;
             n--;
-            console.log(flowerbed)
+            if(n === 0) return true;
         }
     }
-    let result = n <= 0 ? true : false;
-    return result;
+    return false;
 };
-
-function oppositeNum(num) {
-    return num = num === 1 ? 0 : 1;
-}
