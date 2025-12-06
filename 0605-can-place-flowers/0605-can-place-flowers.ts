@@ -6,14 +6,13 @@ function canPlaceFlowers(flowerbed: number[], n: number): boolean {
         // let aadj = flowerbed[i + 1] || oppositeNum(flowerbed[i]);
         let badj = flowerbed[i - 1] || 0;
         let aadj = flowerbed[i + 1] || 0;
-        console.log(adj, badj, aadj)
         if(badj === adj && aadj === adj) {
             flowerbed[i] = oppositeNum(flowerbed[i]);
             n--;
             console.log(flowerbed)
         }
     }
-    let result = n === 0 ? true : false;
+    let result = n <= 0 ? true : false;
     return result;
 };
 
