@@ -4,8 +4,10 @@ function construct2DArray(original: number[], m: number, n: number): number[][] 
 
     let result = [];
     let tempArr = [];
-    while( original.length != 0) {
-        tempArr = original.splice( 0, n);
+    let i = 0;
+    while( i < original.length) {
+        tempArr = original.slice( i, i + n);
+        i = i + n;
         result.push(tempArr);
         tempArr = [];
     }
