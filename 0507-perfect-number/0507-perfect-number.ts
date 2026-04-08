@@ -1,14 +1,6 @@
 function checkPerfectNumber(num: number): boolean {
     
-    let sum = 0;
-    let limit = num/ 2;
-    for(let i = 1; i <= limit; i++) {
-        if(num % i === 0) {
-            sum += i;
-            // sum += num / i;
-        }
-    }
+   if(num == 6 || num == 28 || num == 496 || num == 8128 || num == 33550336) return true;
+   else return false;
 
-    console.log(sum)
-    return sum === num;
 };
