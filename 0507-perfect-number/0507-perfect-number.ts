@@ -1,5 +1,7 @@
 function checkPerfectNumber(num: number): boolean {
     
+    if(num === 1) return false;
+    
     let sum = 1;
     let limit = Math.sqrt(num);
     for(let i = 2; i <= limit; i++) {
