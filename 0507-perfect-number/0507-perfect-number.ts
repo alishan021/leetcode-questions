@@ -1,6 +1,17 @@
 function checkPerfectNumber(num: number): boolean {
     
-   if(num == 6 || num == 28 || num == 496 || num == 8128 || num == 33550336) return true;
-   else return false;
+    let sum = 1;
+    let limit = Math.sqrt(num);
+    for(let i = 2; i <= limit; i++) {
+        if(num % i === 0) {
+            sum += i;
+            if(i != num / i) {
+                sum += num / i;
+            }
+        }
+    } 
 
+    return sum === num;
 };
+
+ 
